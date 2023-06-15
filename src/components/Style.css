@@ -1,0 +1,88 @@
+.wrap {
+  width: 100%;
+}
+.wrap .inner {
+  width: 1400px;
+  margin: auto;
+  padding: 30px 0;
+}
+.wrap .inner h2 {
+  color: rgb(108, 173, 223);
+  font-size: 50px;
+  font-weight: 700;
+}
+.wrap .inner ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+.wrap .inner ul li {
+  width: 260px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  margin: 20px 10px 0 10px;
+  box-sizing: border-box;
+  margin-top: 20px;
+  box-shadow: 0 3px 6px rgba(28, 44, 91, 0.5), 0 3px 6px rgba(28, 44, 91, 0.23);
+  position: relative;
+}
+.wrap .inner ul li::after {
+  content: attr(data-id);
+  position: absolute;
+  right: 10px;
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 60px;
+  letter-spacing: -5px;
+  text-shadow: 0 0 4px black;
+  color: white;
+}
+.wrap .inner ul li:hover::after {
+  color: rgb(28, 44, 91);
+  text-shadow: none;
+}
+.wrap .inner ul li:hover strong {
+  color: rgb(28, 44, 91);
+  text-shadow: none;
+}
+.wrap .inner ul li:hover span {
+  background: rgb(28, 44, 91);
+  color: white;
+}
+.wrap .inner ul li img {
+  display: block;
+  width: 200px;
+  margin: auto;
+  margin-top: 20px;
+}
+.wrap .inner ul li span {
+  font-size: 30px;
+  height: 60px;
+  font-weight: 600;
+  line-height: 60px;
+  background-color: #fff;
+}
+.wrap .popup {
+  width: 100%;
+  border: 1px solid #000;
+}
+.wrap .popup p {
+  font-size: 36px;
+  font-weight: 800;
+}
+.wrap .popup dl {
+  font-size: 26px;
+}
+.wrap .popup dl dt {
+  font-weight: 600;
+}
+.wrap .popup table {
+  border: 1px solid #000;
+  text-align: center;
+  font-size: 18px;
+}
+.wrap .popup table th {
+  font-size: 20px;
+  font-weight: 600;
+}
+/*# sourceMappingURL=Style.css.map */
