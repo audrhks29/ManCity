@@ -11,7 +11,7 @@ const FieldplayerTableTbody = ({ selectedItem }) => {
             }
         },
         {
-            label: "premier League", img: "../../public/images/gb1.png",
+            label: "premier League", img: "./public/images/gb1.png",
             league: {
                 appearances: premierLeague.appearances,
                 goal: premierLeague.goal,
