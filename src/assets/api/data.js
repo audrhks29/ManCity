@@ -1,10 +1,13 @@
 let player = [
     {
+        id: 1,
         no: 47,
         name: 'Philip Foden',
         playerInfo: {
             position: 'FW',
             img: '/p267237692.png',
+            moreimg1: "https://www.footyrenders.com/render/phil-foden-33-390x537.png",
+            moreimg2: "https://www.footyrenders.com/render/phil-foden-26-390x483.png",
             team: 'first team',
             nation: 'England',
             birth: "May 28, 2000",
@@ -65,10 +68,15 @@ let player = [
         }
     },
     {
+        id: 2,
         no: 9,
         name: 'Erling Haaland',
         playerInfo: {
-            position: 'FW', img: '/p280239085.png', team: 'first team',
+            position: 'FW',
+            img: '/p280239085.png',
+            moreimg1: "https://www.footyrenders.com/render/erling-braut-haland-88-326x540.png",
+            moreimg2: "https://www.footyrenders.com/render/erling-braut-haland-85-246x540.png",
+            team: 'first team',
             nation: 'Norway',
             birth: "May 28, 2000",
             placeOfBirth: "Leeds, England",
@@ -146,10 +154,15 @@ let player = [
         }
     },
     {
+        id: 3,
         no: 26,
         name: 'Riyad Mahrez',
         playerInfo: {
-            position: 'FW', img: '/p280204485.png', team: 'sub team',
+            position: 'FW',
+            img: '/p280204485.png',
+            moreimg1: "https://www.footyrenders.com/render/riyad-mahrez-36-252x540.png",
+            moreimg2: "https://www.footyrenders.com/render/Riyad-Mahrez-30-359x540.png",
+            team: 'sub team',
             nation: 'Algeria',
             birth: "Feb 21, 1991",
             placeOfBirth: "Sarcelles, France",
@@ -227,10 +240,14 @@ let player = [
         }
     },
     {
+        id: 4,
         no: 10,
         name: 'Jack Grealish',
         playerInfo: {
-            position: 'FW', img: '/p259206517.png', team: 'sub team',
+            position: 'FW', img: '/p259206517.png',
+            moreimg1: "https://www.footyrenders.com/render/jack-grealish-28-390x432.png",
+            moreimg2: "https://www.footyrenders.com/render/jack-grealish-24-314x540.png",
+            team: 'sub team',
             nation: 'England',
             birth: "Sep 10, 1995",
             placeOfBirth: "Birmingham, England",
@@ -285,10 +302,15 @@ let player = [
         }
     },
     {
+        id: 5,
         no: 19,
         name: 'Julián Álvarez',
         playerInfo: {
-            position: 'FW', img: '/p280246191.png', team: 'sub team',
+            position: 'FW',
+            img: '/p280246191.png',
+            moreimg1: "https://www.footyrenders.com/render/julian-alvarez-2-272x540.png",
+            moreimg2: "https://www.footyrenders.com/render/julian-alvarez-4-390x376.png",
+            team: 'sub team',
             nation: 'Argentina',
             birth: "Jan 31, 2000",
             placeOfBirth: "Calchín , Argentina",
@@ -340,10 +362,15 @@ let player = [
         }
     },
     {
+        id: 6,
         no: 20,
         name: 'Bernardo Silva',
         playerInfo: {
-            position: 'FW', img: '/p267218667.png', team: 'first team',
+            position: 'FW',
+            img: '/p267218667.png',
+            moreimg1: "https://www.footyrenders.com/render/bernardo-silva-28-390x524.png",
+            moreimg2: "https://www.footyrenders.com/render/bernardo-silva-31-365x540.png",
+            team: 'first team',
             nation: 'Portugal',
             birth: "Aug 10, 1994",
             placeOfBirth: "Lisboa, Portugal",
@@ -400,10 +427,15 @@ let player = [
         }
     },
     {
+        id: 7,
         no: 80,
         name: 'Cole Palmer',
         playerInfo: {
-            position: 'FW', img: '/p260257534.png', team: 'sub team',
+            position: 'FW',
+            img: '/p260257534.png',
+            moreimg1: "https://www.footyrenders.com/render/cole-palmer-1-323x540.png",
+            moreimg2: "https://www.footyrenders.com/render/cole-palmer-239x540.png",
+            team: 'sub team',
             nation: 'England',
             birth: "May 6, 2002",
             placeOfBirth: "Manchester, England",
@@ -452,10 +484,15 @@ let player = [
         }
     },
     {
+        id: 8,
         no: 8,
         name: 'İlkay Gündoğan',
         playerInfo: {
-            position: 'MF', img: '/p273186942.png', team: 'first team',
+            position: 'MF',
+            img: '/p273186942.png',
+            moreimg1: "https://www.footyrenders.com/render/ilkay-gundogan-18-390x453.png",
+            moreimg2: "https://www.footyrenders.com/render/Ilkay-Gundogan-9-277x540.png",
+            team: 'first team',
             nation: 'Germany',
             birth: "Oct 24, 1990",
             placeOfBirth: "Gelsenkirchen, Germany",
@@ -510,10 +547,15 @@ let player = [
         }
     },
     {
+        id: 9,
         no: 17,
         name: 'Kevin De Bruyne',
         playerInfo: {
-            position: 'MF', img: '/p278192985.png', team: 'first team',
+            position: 'MF',
+            img: '/p278192985.png',
+            moreimg1: "https://www.footyrenders.com/render/kevin-de-bruyne-69-315x540.png",
+            moreimg2: "https://www.footyrenders.com/render/kevin-de-bruyne-56-390x515.png",
+            team: 'first team',
             nation: 'Belgium',
             birth: "Jun 28, 1991",
             placeOfBirth: "Drongen, Belgium",
@@ -549,10 +591,14 @@ let player = [
         }
     },
     {
+        id: 10,
         no: 4,
         name: 'Kalvin Phillips',
         playerInfo: {
-            position: 'MF', img: '/p273224081.png', team: 'first team',
+            position: 'MF',
+            img: '/p273224081.png',
+            moreimg1: "https://1vs1-7f65.kxcdn.com/img/players/large/webp/kalvin-phillips-283941_248.webp",
+            team: 'first team',
             nation: 'England',
             birth: "Dec 2, 1995",
             placeOfBirth: "Leeds, England",
@@ -577,10 +623,15 @@ let player = [
         }
     },
     {
+        id: 11,
         no: 16,
         name: 'Rodrigo',
         playerInfo: {
-            position: 'MF', img: '/p279231866.png', team: 'sub team',
+            position: 'MF',
+            img: '/p279231866.png',
+            moreimg1: "https://www.footyrenders.com/render/rodrigo-hernandez-10-292x540.png",
+            moreimg2: "https://www.footyrenders.com/render/rodrigo-hernandez-9-390x368.png",
+            team: 'sub team',
             nation: 'Spain',
             birth: "Jun 22, 1996",
             placeOfBirth: "Madrid, Spain",
@@ -609,10 +660,15 @@ let player = [
         }
     },
     {
+        id: 12,
         no: 32,
         name: 'Máximo Perrone',
         playerInfo: {
-            position: 'MF', img: '/p267991.png', team: 'sub team',
+            position: 'MF',
+            img: '/p267991.png',
+            moreimg1: "https://assets.sorare.com/image-resize/player/7c5e36e6-118c-4802-b7e6-0772561f88d1/picture/tinified-d9e92950201fc729158194241cd890dd.png?width=640",
+            moreimg2: "",
+            team: 'sub team',
             nation: 'Argentina',
             birth: "Jan 7, 2003",
             placeOfBirth: "Buenos Aires, Argentina",
@@ -636,10 +692,15 @@ let player = [
         }
     },
     {
+        id: 13,
         no: 2,
         name: 'Kyle Walker',
         playerInfo: {
-            position: 'DF', img: '/p259188377.png', team: 'first team',
+            position: 'DF',
+            img: '/p259188377.png',
+            moreimg1: "https://www.footyrenders.com/render/kyle-walker-33-378x540.png",
+            moreimg2: "https://www.footyrenders.com/render/kyle-walker-26-390x523.png",
+            team: 'first team',
             nation: 'England',
             birth: "May 28, 1990",
             placeOfBirth: "Sheffield, England",
@@ -673,10 +734,15 @@ let player = [
         }
     },
     {
+        id: 14,
         no: 3,
         name: 'Rúben Dias',
         playerInfo: {
-            position: 'DF', img: '/p280239818.png', team: 'first team',
+            position: 'DF',
+            img: '/p280239818.png',
+            moreimg1: "https://www.footyrenders.com/render/ruben-dias-11-390x458.png",
+            moreimg2: "https://www.footyrenders.com/render/ruben-dias-5-390x502.png",
+            team: 'first team',
             nation: 'Portugal',
             birth: "May 14, 1997",
             placeOfBirth: "Amadora, Portugal",
@@ -706,10 +772,15 @@ let player = [
         }
     },
     {
+        id: 15,
         no: 5,
         name: 'John Stones',
         playerInfo: {
-            position: 'DF', img: '/p280203574.png', team: 'first team',
+            position: 'DF',
+            img: '/p280203574.png',
+            moreimg1: "https://www.footyrenders.com/render/john-stones-11-315x540.png",
+            moreimg2: "https://www.footyrenders.com/render/John-Stones-8-324x540.png",
+            team: 'first team',
             nation: 'England',
             birth: "May 28, 1994",
             placeOfBirth: "Barnsley, England",
@@ -733,10 +804,15 @@ let player = [
         }
     },
     {
+        id: 16,
         no: 6,
         name: 'Nathan Aké',
         playerInfo: {
-            position: 'DF', img: '/p242208920.png', team: 'first team',
+            position: 'DF',
+            img: '/p242208920.png',
+            moreimg1: "https://www.footyrenders.com/render/ake-1-286x540.png",
+            moreimg2: "https://www.footyrenders.com/render/nathan-ake-8-376x540.png",
+            team: 'first team',
             nation: 'Netherlands',
             birth: "Feb 18, 1995",
             placeOfBirth: "Den Haag, Netherlands",
@@ -772,10 +848,15 @@ let player = [
         }
     },
     {
+        id: 17,
         no: 14,
         name: 'Aymeric Laporte',
         playerInfo: {
-            position: 'DF', img: '/p146941.png', team: 'sub team',
+            position: 'DF',
+            img: '/p146941.png',
+            moreimg1: "https://www.footyrenders.com/render/aymeric-laporte-17-323x540.png",
+            moreimg2: "https://www.footyrenders.com/render/aymeric-laporte-12-307x540.png",
+            team: 'sub team',
             nation: 'France',
             birth: "May 27, 1994",
             placeOfBirth: "Agen, France",
@@ -804,10 +885,14 @@ let player = [
         }
     },
     {
+        id: 18,
         no: 21,
         name: 'Sergio Gómez',
         playerInfo: {
-            position: 'DF', img: '/p280241811.png', team: 'sub team',
+            position: 'DF',
+            img: '/p280241811.png',
+            moreimg1: "https://www.footyrenders.com/render/sergio-gomez-390x409.png",
+            team: 'sub team',
             nation: 'Spain',
             birth: "Sep 4, 2000",
             placeOfBirth: "Badalona, Spain",
@@ -839,10 +924,13 @@ let player = [
         }
     },
     {
+        id: 19,
         no: 25,
         name: 'Manuel Akanji',
         playerInfo: {
-            position: 'DF', img: '/p280229237.png', team: 'sub team',
+            position: 'DF',
+            img: '/p280229237.png',
+            team: 'sub team',
             nation: 'switzerland',
             birth: "Jul 19, 1995",
             placeOfBirth: "Wiesendangen, Switzerland",
@@ -869,10 +957,14 @@ let player = [
         }
     },
     {
+        id: 20,
         no: 82,
         name: 'Rico Lewis',
         playerInfo: {
-            position: 'DF', img: '/p280271574.png', team: 'sub team',
+            position: 'DF',
+            img: '/p280271574.png',
+            moreimg1: "https://www.footyrenders.com/render/rico-lewis-390x496.png",
+            team: 'sub team',
             nation: 'England',
             birth: "Nov 21, 2004",
             placeOfBirth: "Bury, England",
@@ -898,10 +990,15 @@ let player = [
         }
     },
     {
+        id: 21,
         no: 18,
         name: 'Stefan Ortega',
         playerInfo: {
-            position: 'GK', img: '/p280200159.png', team: 'sub team',
+            position: 'GK',
+            img: '/p280200159.png',
+            moreimg1: "",
+            moreimg2: "",
+            team: 'sub team',
             nation: 'Germany',
             birth: "Nov 6, 1992",
             placeOfBirth: "Hofgeismar, Germany",
@@ -928,10 +1025,15 @@ let player = [
         }
     },
     {
+        id: 22,
         no: 31,
         name: 'Ederson Moraes',
         playerInfo: {
-            position: 'GK', img: '/p279210257.png', team: 'first team',
+            position: 'GK',
+            img: '/p279210257.png',
+            moreimg1: "https://www.footyrenders.com/render/ederson-moraes-8-390x362.png",
+            moreimg2: "https://www.footyrenders.com/render/ederson-moraes-7-390x384.png",
+            team: 'first team',
             nation: 'Brazil',
             birth: "Aug 17, 1993",
             placeOfBirth: "Osasco (SP), Brazil",
@@ -960,10 +1062,13 @@ let player = [
         }
     },
     {
+        id: 23,
         no: 33,
         name: 'Scott Carson',
         playerInfo: {
-            position: 'GK', img: '/p157804.png', team: 'sub team',
+            position: 'GK',
+            img: '/p157804.png',
+            team: 'sub team',
             nation: 'England',
             birth: "Sep 3, 1985",
             placeOfBirth: "Whitehaven, England",
@@ -987,7 +1092,11 @@ let player = [
                 { season: "21/22", date: "Jul 20, 2021", leftTeam: "Derby", joinedTeam: "Man City" },
             ],
             stats: {
-                championsLeague: { appearances: 0, goalsConceded: 0, cleanSheets: 0, playTime: 0 }, premierLeague: { appearances: 0, goalsConceded: 0, cleanSheets: 0, playTime: 0 }, faCup: { appearances: 0, goalsConceded: 0, cleanSheets: 0, playTime: 0 }, eflCup: { appearances: 0, goalsConceded: 0, cleanSheets: 0, playTime: 0 }, communityShield: { appearances: 0, goalsConceded: 0, cleanSheets: 0, playTime: 0 },
+                championsLeague: { appearances: 0, goalsConceded: 0, cleanSheets: 0, playTime: 0 },
+                premierLeague: { appearances: 0, goalsConceded: 0, cleanSheets: 0, playTime: 0 },
+                faCup: { appearances: 0, goalsConceded: 0, cleanSheets: 0, playTime: 0 },
+                eflCup: { appearances: 0, goalsConceded: 0, cleanSheets: 0, playTime: 0 },
+                communityShield: { appearances: 0, goalsConceded: 0, cleanSheets: 0, playTime: 0 },
             },
             social: {
                 twitter: "http://twitter.com/SCarsonOfficial",

@@ -3,13 +3,13 @@ $subColor: rgb(28, 44, 91);
 
 .wrap {
     width: 100%;
-
-
+    position: relative;
 
     .inner {
         width: 1400px;
         margin: auto;
         padding: 30px 0;
+
 
         h2 {
             color: $mainColor;
@@ -17,7 +17,7 @@ $subColor: rgb(28, 44, 91);
             font-weight: 700;
         }
 
-        ul {
+        .playersByPosition {
             display: flex;
             flex-wrap: wrap;
 
@@ -31,6 +31,7 @@ $subColor: rgb(28, 44, 91);
                 margin-top: 20px;
                 box-shadow: 0 3px 6px rgba(28, 44, 91, 0.5), 0 3px 6px rgba(28, 44, 91, 0.23);
                 position: relative;
+                cursor: pointer;
 
                 &::after {
                     content: attr(data-id);
@@ -77,37 +78,197 @@ $subColor: rgb(28, 44, 91);
                 }
             }
         }
+    }
 
+    .popup.on {
+        display: block;
+        transition: 0.4s;
 
     }
 
     .popup {
         width: 100%;
-        border: 1px solid #000;
+        background: url('../../public/images/bg.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: absolute;
+        bottom: 0;
+        position: fixed;
+        display: none;
 
 
-        p {
-            font-size: 36px;
-            font-weight: 800;
-        }
+        .popupIn {
+            margin: auto;
+            display: flex;
+            position: relative;
 
-        dl {
-            font-size: 26px;
+            .popupLeft {
+                width: 400px;
 
-            dt {
-                font-weight: 600;
+                img {
+                    width: 250px;
+                    height: 250px;
+                    display: block;
+                    margin: auto;
+                }
+
+                .personalDetailList {
+                    line-height: 40px;
+                    display: flex;
+                    justify-content: space-between;
+                    background-color: rgba(255, 255, 255, 0.5);
+
+                    ul {
+                        width: 350px;
+
+                        li {
+                            padding: 0 20px;
+                            display: flex;
+                            font-size: 15px;
+                            display: flex;
+                            justify-content: space-between;
+
+                            span {
+                                font-weight: 600;
+                            }
+                        }
+                    }
+                }
             }
-        }
 
+            .popupRight {
+                width: 100%;
 
-        table {
-            border: 1px solid #000;
-            text-align: center;
-            font-size: 18px;
+                .personalNameNum {
+                    display: flex;
+                    justify-content: space-between;
 
-            th {
-                font-size: 20px;
-                font-weight: 600;
+                    .closePopup {
+                        position: absolute;
+                        right: 0;
+                        top: -20px;
+                        cursor: pointer;
+
+                        i {
+                            font-size: 30px;
+                            color: $subColor;
+                        }
+                    }
+
+                    >span {
+                        font-size: 60px;
+                        color: $subColor;
+                        line-height: 90px;
+                        font-weight: 700;
+                    }
+
+                    >strong {
+                        font-size: 60px;
+                        color: $subColor;
+                        line-height: 90px;
+                        font-weight: 700;
+                    }
+                }
+
+                .player_stats_transfer {
+                    background-color: rgba(255, 255, 255, 0.5);
+                    padding: 30px 20px;
+                    height: 380px;
+
+                    .popupGnb {
+                        ul {
+                            display: flex;
+                            border-bottom: 3px solid $subColor;
+
+                            li {
+                                font-size: 30px;
+                                padding: 0 20px;
+                                cursor: pointer;
+
+                                &.on {
+                                    background-color: rgba($subColor, 0.8);
+                                    color: white;
+                                }
+                            }
+                        }
+                    }
+
+                    .popupContent {
+                        padding: 20px;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: flex-start;
+
+                        .playerImage {
+                            display: flex;
+                            justify-content: space-around;
+                            width: 100%;
+
+                            li {
+                                display: block;
+                                width: 30%;
+                                overflow: hidden;
+
+                                img {
+                                    height: 300px;
+                                    display: block;
+                                    margin: auto;
+                                }
+                            }
+                        }
+                    }
+
+                    .playerStats {
+                        tbody {
+                            tr {
+                                :nth-child(1) {
+                                    text-align: left;
+                                }
+                            }
+                        }
+                    }
+
+                    table {
+                        border: 1px solid #000;
+                        text-align: center;
+                        font-size: 14px;
+
+                        thead {
+                            tr {
+                                font-size: 16px;
+                                font-weight: 600;
+
+                                th {
+                                    vertical-align: middle;
+
+                                    img {
+                                        width: 20px;
+                                        vertical-align: middle;
+
+                                    }
+                                }
+                            }
+                        }
+
+                        tbody {
+                            tr {
+                                height: 30px;
+
+                                td {
+                                    vertical-align: middle;
+                                    border: 1px solid #000;
+
+                                    img {
+                                        width: 20px;
+                                        vertical-align: middle;
+                                        margin-right: 15px;
+
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
     }
