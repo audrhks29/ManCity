@@ -1,10 +1,10 @@
 const GkplayerTableThead = () => {
     const gkpalyerTableTheadImg = [
         { label: "Competition", key: "Competition" },
-        { label: "Appearances", key: "Appearances", img: '../../public/images/appearances.svg' },
-        { label: "Goals Conceded", key: "Goals Conceded", img: '../../public/images/goalsConceded.svg' },
-        { label: "Clean Sheets", key: "Clean Sheets", img: '../../public/images/cleansheets.svg' },
-        { label: "Play Time", key: "Play Time", img: '../../public/images/playTime.svg' },
+        { label: "Appearances", key: "Appearances", img: './images/appearances.svg' },
+        { label: "Goals Conceded", key: "Goals Conceded", img: './images/goalsConceded.svg' },
+        { label: "Clean Sheets", key: "Clean Sheets", img: './images/cleansheets.svg' },
+        { label: "Play Time", key: "Play Time", img: './images/playTime.svg' },
     ]
     return (
         <thead>

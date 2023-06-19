@@ -24,7 +24,7 @@ const Popup = ({ isOpen, data, popupName, closePopup, isOpenGnb, OpenGnb, change
                                     <span>{selectedItem && selectedItem.no}</span>
                                     <div className="closePopup" onClick={closePopup}><i className="xi-close"></i></div>
                                 </div>
-                                <PlayerStatsTransfer isOpenGnb={isOpenGnb} OpenGnb={OpenGnb} selectedItem={selectedItem} />
+                                <PlayerStatsTransfer isOpenGnb={isOpenGnb} OpenGnb={OpenGnb} selectedItem={selectedItem} changeImg={changeImg} playerFace={playerFace} />
                             </div>
                         </div>
                     </div>

@@ -1,8 +1,7 @@
 import React from 'react';
 
-const PlayerImage = ({ selectedItem, changeImg }) => {
-    const keys = Object.keys(selectedItem.playerInfo);
-    console.log(keys);
+const PlayerImage = ({ selectedItem, changeImg, playerFace }) => {
+    console.log(selectedItem.playerInfo.moreimg1);
     return (
         <ul className='playerImage'>
             <li onClick={() => changeImg(selectedItem.playerInfo.img)}><img src={`./images${selectedItem.playerInfo.img}`} /></li>

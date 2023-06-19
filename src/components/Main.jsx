@@ -23,14 +23,17 @@ const Main = () => {
         setPopupOpen(name);
         setPopupName(name)
         setIsOpen(!isOpen);
-        console.log(name);
     };
+    const changeImg = (id) => {
+        setPlayerFace(id)
+        return (<img src={`/images/${id}`} alt="Player Face" />)
+    }
     return (
         <div className="wrap">
             {
                 posi.map((item, idx) => <PosList key={item.no} posi={posi} item={item} idx={idx} data={data} liClick={liClick} isPopupOpen={isPopupOpen} isOpen={isOpen} />)
             }
-            <Popup isPopupOpen={isPopupOpen} data={data} popupName={popupName} closePopup={closePopup} isOpen={isOpen} isOpenGnb={isOpenGnb} OpenGnb={OpenGnb} />
+            <Popup isPopupOpen={isPopupOpen} data={data} popupName={popupName} closePopup={closePopup} isOpen={isOpen} isOpenGnb={isOpenGnb} OpenGnb={OpenGnb} changeImg={changeImg} playerFace={playerFace} />
         </div>
 
     );

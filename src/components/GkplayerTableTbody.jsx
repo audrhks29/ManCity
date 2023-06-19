@@ -2,7 +2,7 @@ const GkplayerTableTbody = ({ selectedItem }) => {
     const { championsLeague, premierLeague, faCup, eflCup, communityShield } = selectedItem.playerInfo.stats
     const gkplayerTableTbodyData = [
         {
-            label: "champions League", img: "../../public/images/cl.png",
+            label: "champions League", img: "./images/cl.png",
             league: {
                 appearances: championsLeague.appearances,
                 goalsConceded: championsLeague.goalsConceded,
@@ -11,7 +11,7 @@ const GkplayerTableTbody = ({ selectedItem }) => {
             }
         },
         {
-            label: "premier League", img: "../../public/images/gb1.png",
+            label: "premier League", img: "./images/gb1.png",
             league: {
                 appearances: premierLeague.appearances,
                 goalsConceded: premierLeague.goalsConceded,
@@ -20,7 +20,7 @@ const GkplayerTableTbody = ({ selectedItem }) => {
             }
         },
         {
-            label: "FA Cup", img: "../../public/images/fac.png",
+            label: "FA Cup", img: "./images/fac.png",
             league: {
                 appearances: faCup.appearances,
                 goalsConceded: faCup.goalsConceded,
@@ -29,7 +29,7 @@ const GkplayerTableTbody = ({ selectedItem }) => {
             }
         },
         {
-            label: "EFL Cup", img: "../../public/images/cgb.png",
+            label: "EFL Cup", img: "./images/cgb.png",
             league: {
                 appearances: eflCup.appearances,
                 goalsConceded: eflCup.goalsConceded,
@@ -38,7 +38,7 @@ const GkplayerTableTbody = ({ selectedItem }) => {
             }
         },
         {
-            label: "Community Shield", img: "../../public/images/gbcs.png",
+            label: "Community Shield", img: "./images/gbcs.png",
             league: {
                 appearances: communityShield.appearances,
                 goalsConceded: communityShield.goalsConceded,
