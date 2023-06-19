@@ -1,10 +1,10 @@
 const FieldplayerTableThead = () => {
     const fieldpalyerTableTheadImg = [
         { label: "Competition", key: "Competition" },
-        { label: "Appearances", key: "Appearances", img: '../../public/images/appearances.svg' },
-        { label: "Goal", key: "goal", img: '../../public/images/goal.svg' },
-        { label: "Assists", key: "Assists", img: '../../public/images/assists.svg' },
-        { label: "Play Time", key: "Play Time", img: '../../public/images/playTime.svg' },
+        { label: "Appearances", key: "Appearances", img: './images/appearances.svg' },
+        { label: "Goal", key: "goal", img: './images/goal.svg' },
+        { label: "Assists", key: "Assists", img: './images/assists.svg' },
+        { label: "Play Time", key: "Play Time", img: './images/playTime.svg' },
     ]
     return (
         <thead>
