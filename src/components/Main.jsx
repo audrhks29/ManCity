@@ -2,7 +2,7 @@ import { useState } from 'react';
 import player from '../assets/api/data';
 import '../assets/css/reset.css'
 import PosList from './PosList';
-import Popup from './Popup';
+import Popup from './Popup/Popup';
 const PosData = ["FW", "MF", "DF", "GK"]
 const Main = () => {
     const [data, setData] = useState(player)

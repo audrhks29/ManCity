@@ -1,5 +1,5 @@
 import Main from './components/Main'
-import './components/Style.css'
+import './assets/css/Style.scss'
 
 const App = () => {
   return (

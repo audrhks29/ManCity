@@ -1,6 +1,5 @@
-
-import PopupContent from "./popupContent";
-import PopupGnb from "./popupGnb";
+import PopupContent from "./Popup/PopupContent";
+import PopupGnb from "./Popup/popupGnb";
 const PlayerStatsTransfer = ({ selectedItem, isOpenGnb, OpenGnb, changeImg, playerFace }) => {
 
     return (

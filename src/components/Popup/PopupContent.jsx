@@ -1,7 +1,8 @@
-import FieldplayerTable from "./FieldplayerTable";
-import GkplayerTable from "./GkplayerTable";
-import TransferTable from "./TransferTable";
-import PlayerImage from "./playerImage";
+
+import GkplayerTable from "./GKPlayerTable/GkplayerTable";
+import TransferTable from "./TransferTable/TransferTable";
+import FieldplayerTable from './FieldPlayerTable/FieldplayerTable';
+import PlayerImage from "../playerImage";
 
 const PopupContent = ({ isOpenGnb, selectedItem, changeImg, playerFace }) => {
     return (

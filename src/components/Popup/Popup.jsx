@@ -1,6 +1,6 @@
 
-import PersonalDetail from "./PersonalDetail";
-import PlayerStatsTransfer from "./PlayerStatsTransfer";
+import PlayerStatsTransfer from "./../PlayerStatsTransfer";
+import PersonalDetail from './../PersonalDetail';
 
 
 const Popup = ({ isOpen, data, popupName, closePopup, isOpenGnb, OpenGnb, changeImg, playerFace }) => {
