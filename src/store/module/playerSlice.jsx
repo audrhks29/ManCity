@@ -8,7 +8,7 @@ const initialState = {
 export const getPlayerData = createAsyncThunk(
     'player/getPlayerData',
     async () => {
-        const res = await axios.get('https://gist.githubusercontent.com/audrhks29/d85765f175243e27d4a84a76f44f4d75/raw/f903d33088ebc424e1fb77ae424ff687d0df46de/playerData.json')
+        const res = await axios.get('https://gist.githubusercontent.com/audrhks29/d85765f175243e27d4a84a76f44f4d75/raw/9fcf4b7ab83500d1ef15c12d32726e822e8c170a/playerData.json')
         return res.data
     }
 )

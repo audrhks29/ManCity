@@ -6,18 +6,16 @@ const Inner = ({ posi, idx, liClick, isOpen }) => {
     const dispatch = useDispatch()
     const [data, setData] = useState()
     useEffect(() => {
-        loading && dispatch(getPlayerData())
-        setData(playerData)
-    }, [loading])
-    console.log(typeof (playerData));
-    // console.log(typeof (data));
+        dispatch(getPlayerData())
+    }, [])
+
     return (
         <div className='inner'>
             <h2>{posi[idx]}</h2>
             <ul className="playersByPosition">
 
                 {
-                    playerData.filter(item => item.playerInfo.position === posi[idx]).map(item => {
+                    playerData && playerData.filter(item => item.playerInfo.position === posi[idx]).map(item => {
                         const { name, no, id } = item
                         const { img } = item.playerInfo
                         return <li key={id} data-id={no} onClick={() => liClick(name)}><img src={`./images${img}`} alt="" /><span>{name}</span></li>

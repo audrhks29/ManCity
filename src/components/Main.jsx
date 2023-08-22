@@ -16,10 +16,7 @@ const Main = () => {
     const [popupName, setPopupName] = useState('');
     const [isPopupOpen, setPopupOpen] = useState('');
     const [playerFace, setPlayerFace] = useState('')
-    useEffect(() => {
-        dispatch(getPlayerData())
-        setData(playerData)
-    }, [loading])
+
 
     const closePopup = () => {
         setIsOpen(false);
