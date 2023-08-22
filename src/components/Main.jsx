@@ -1,17 +1,26 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import player from '../assets/api/data';
 import '../assets/css/reset.css'
 import PosList from './PosList';
 import Popup from './Popup/Popup';
+import { useDispatch, useSelector } from 'react-redux';
+import { getPlayerData } from '../store/module/playerSlice';
 const PosData = ["FW", "MF", "DF", "GK"]
 const Main = () => {
-    const [data, setData] = useState(player)
+    const { playerData, loading } = useSelector(state => state.playerR)
+    const dispatch = useDispatch()
+    const [data, setData] = useState(playerData)
     const [posi, setPosi] = useState(PosData)
     const [isOpen, setIsOpen] = useState(false)
     const [isOpenGnb, setIsOpenGnb] = useState(1)
     const [popupName, setPopupName] = useState('');
     const [isPopupOpen, setPopupOpen] = useState('');
     const [playerFace, setPlayerFace] = useState('')
+    useEffect(() => {
+        dispatch(getPlayerData())
+        setData(playerData)
+    }, [loading])
+
     const closePopup = () => {
         setIsOpen(false);
     }
@@ -31,9 +40,11 @@ const Main = () => {
     return (
         <div className="wrap">
             {
-                posi.map((item, idx) => <PosList key={item.no} posi={posi} item={item} idx={idx} data={data} liClick={liClick} isPopupOpen={isPopupOpen} isOpen={isOpen} />)
+                posi.map((item, idx) =>
+                    <PosList key={item.no} posi={posi} item={item} idx={idx} data={data} liClick={liClick} isPopupOpen={isPopupOpen} isOpen={isOpen} />
+                )
             }
-            <Popup isPopupOpen={isPopupOpen} data={data} popupName={popupName} closePopup={closePopup} isOpen={isOpen} isOpenGnb={isOpenGnb} OpenGnb={OpenGnb} changeImg={changeImg} playerFace={playerFace} />
+            {/* <Popup isPopupOpen={isPopupOpen} data={data} popupName={popupName} closePopup={closePopup} isOpen={isOpen} isOpenGnb={isOpenGnb} OpenGnb={OpenGnb} changeImg={changeImg} playerFace={playerFace} /> */}
         </div>
 
     );
