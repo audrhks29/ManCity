@@ -5,6 +5,6 @@
 <details>
 <summary>[v1.0.0] Upload 20230726</summary>
 <div markdown="1">
-## 맨체스터시티 선수정보 페이지 업로드
+맨체스터시티 선수정보 페이지 업로드
 </div>
 </details>
