@@ -1,10 +1,13 @@
 // import PersonalDetailPd1 from "./PersonalDetailPd1";
 // import PersonalDetailPd2 from "./PersonalDetailPd2";
 
-const PersonalDetail = ({ selectedItem }) => {
-    const { height, weight, foot } = selectedItem.playerInfo.body
-    const { position } = selectedItem.playerInfo
-    const { nation, birth, placeOfBirth } = selectedItem.playerInfo
+import { useSelector } from "react-redux";
+
+const PersonalDetail = ({ }) => {
+    const { selectedPlayer } = useSelector(state => state.popupR)
+    const { height, weight, foot } = selectedPlayer.playerInfo.body
+    const { position } = selectedPlayer.playerInfo
+    const { nation, birth, placeOfBirth } = selectedPlayer.playerInfo
     const pd1Data = [
         { label: 'Position', key: 'position', value: position },
         { label: 'Height', key: 'height', value: `${height}cm` },
@@ -19,10 +22,10 @@ const PersonalDetail = ({ selectedItem }) => {
         <div className="personalDetailList">
             <ul>
                 {
-                    pd1Data.map(detail => (
-                        <li key={detail.key}>
-                            <strong>{detail.label}</strong>
-                            <span>{detail.value}</span>
+                    pd1Data.map(item => (
+                        <li key={item.key}>
+                            <strong>{item.label}</strong>
+                            <span>{item.value}</span>
                         </li>
                     ))
                 }

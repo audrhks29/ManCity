@@ -1,30 +1,30 @@
 
 import PlayerStatsTransfer from "./../PlayerStatsTransfer";
 import PersonalDetail from './../PersonalDetail';
+import { useSelector } from "react-redux";
 
 
-const Popup = ({ isOpen, data, popupName, closePopup, isOpenGnb, OpenGnb, changeImg, playerFace }) => {
-    console.log(isOpen);
-    console.log(isOpenGnb);
-    const selectedItem = data.find(item => item.name === popupName)
-
+const Popup = ({ changeImg, playerFace }) => {
+    const { playerData } = useSelector(state => state.playerR)
+    const { selectedPlayer } = useSelector(state => state.popupR)
+    console.log(selectedPlayer);
     return (
         <>
             {
-                selectedItem && <div className={isOpen ? 'popup on' : 'popup'}>
+                <div className={selectedPlayer ? 'popup on' : 'popup'}>
                     <div className="inner">
                         <div className="popupIn">
                             <div className="popupLeft">
-                                <img src={`./images${selectedItem.playerInfo.img}`} alt="" />
-                                <PersonalDetail selectedItem={selectedItem} />
+                                <img src={`./images${selectedPlayer.playerInfo.img}`} alt="" />
+                                <PersonalDetail />
                             </div>
                             <div className="popupRight">
                                 <div className="personalNameNum">
-                                    <strong>{selectedItem && selectedItem.name}</strong>
-                                    <span>{selectedItem && selectedItem.no}</span>
-                                    <div className="closePopup" onClick={closePopup}><i className="xi-close"></i></div>
+                                    <strong>{selectedPlayer && selectedPlayer.name}</strong>
+                                    <span>{selectedPlayer && selectedPlayer.no}</span>
+                                    <div className="closePopup"><i className="xi-close"></i></div>
                                 </div>
-                                <PlayerStatsTransfer isOpenGnb={isOpenGnb} OpenGnb={OpenGnb} selectedItem={selectedItem} changeImg={changeImg} playerFace={playerFace} />
+                                <PlayerStatsTransfer changeImg={changeImg} playerFace={playerFace} />
                             </div>
                         </div>
                     </div>

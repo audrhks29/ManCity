@@ -2,7 +2,7 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
 const initialState = {
     playerData: [],
-    selectedPlayer: [],
+    position: ["FW", "MF", "DF", "GK"],
     loading: true
 }
 export const getPlayerData = createAsyncThunk(
@@ -16,16 +16,7 @@ export const playerSlice = createSlice({
     name: 'player',
     initialState,
     reducers: {
-        onUp: (state, action) => {
-            //action 값이 없으면 action은 안써도 되자만 state값은 꼭 써야함
-            state.cnt += 1
-        },
-        onDown: (state, action) => {
-            state.cnt -= 1
-        },
-        onReset: (state) => {
-            state.cnt = 0
-        }
+
     },
     extraReducers: (builder) => {
         builder

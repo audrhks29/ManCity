@@ -1,11 +1,12 @@
+import { memo } from "react";
+import { useSelector } from "react-redux";
 import Inner from "./Inner";
-
-const PosList = ({ data, posi, idx, liClick, isPopupOpen, isOpen }) => {
+const PosList = memo(({ idx, liClick, isPopupOpen, isOpen }) => {
+    const { position } = useSelector(state => state.playerR)
     return (
-        <div className={`pos${posi[idx]}Con`}>
-            <Inner posi={posi} idx={idx} data={data} liClick={liClick} isPopupOpen={isPopupOpen} isOpen={isOpen} />
+        <div className={`pos${position[idx]}Con`}>
+            <Inner idx={idx} liClick={liClick} isPopupOpen={isPopupOpen} isOpen={isOpen} />
         </div>
     );
-};
-
+});
 export default PosList;

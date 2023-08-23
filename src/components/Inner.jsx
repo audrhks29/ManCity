@@ -1,30 +1,30 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getPlayerData } from '../store/module/playerSlice';
-const Inner = ({ posi, idx, liClick, isOpen }) => {
-    const { playerData, loading } = useSelector(state => state.playerR)
+import { isPopupOpen, isSelectPlayer } from '../store/module/PopupStatusSlice';
+const Inner = ({ idx }) => {
+    const { playerData, position } = useSelector(state => state.playerR)
     const dispatch = useDispatch()
-    const [data, setData] = useState()
     useEffect(() => {
         dispatch(getPlayerData())
     }, [])
-
+    const onClickList = (item) => {
+        dispatch(isSelectPlayer(item))
+        dispatch(isPopupOpen())
+    }
     return (
         <div className='inner'>
-            <h2>{posi[idx]}</h2>
+            <h2>{position[idx]}</h2>
             <ul className="playersByPosition">
-
                 {
-                    playerData && playerData.filter(item => item.playerInfo.position === posi[idx]).map(item => {
+                    playerData && playerData.filter(item => item.playerInfo.position === position[idx]).map(item => {
                         const { name, no, id } = item
                         const { img } = item.playerInfo
-                        return <li key={id} data-id={no} onClick={() => liClick(name)}><img src={`./images${img}`} alt="" /><span>{name}</span></li>
+                        return <li key={id} data-id={no} onClick={() => onClickList(item)}><img src={`./images${img}`} alt="" /><span>{name}</span></li>
                     })
                 }
             </ul>
-
-
-        </div>
+        </div >
     );
 };
 
