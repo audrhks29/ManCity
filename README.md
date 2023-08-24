@@ -23,7 +23,8 @@
 <details>
 <summary>[v1.1.0] Update 20230824</summary>
 <div markdown="1">
-Redux 라이브러리로 변환
+Redux 라이브러리 사용하여 리팩토링
+axios 사용
 </div>
 </details>
 <details>
