@@ -2,24 +2,32 @@ import { memo } from "react";
 import GkplayerTable from "./GKPlayerTable/GkplayerTable";
 import TransferTable from "./TransferTable/TransferTable";
 import FieldplayerTable from './FieldPlayerTable/FieldplayerTable';
-import PlayerImage from "../playerImage";
-import { useDispatch, useSelector } from "react-redux";
+import PlayerImage from "./playerImage";
+import { useSelector } from "react-redux";
+import { PopupContentContainer } from "../../styled/PopupStyle";
 
 
 const PopupContent = memo(() => {
     const { popupMenu, selectedPlayer } = useSelector(state => state.popupR)
-    const dispatch = useDispatch()
     return (
-        <div className="popupContent">
+        <PopupContentContainer>
             {
                 popupMenu === 1
                     ? selectedPlayer.playerInfo.position === "GK"
                         ? <GkplayerTable />
                         : <FieldplayerTable /> : ""
             }
-            {popupMenu === 2 ? <TransferTable /> : ""}
-            {popupMenu === 3 ? <PlayerImage /> : ""}
-        </div>
+            {
+                popupMenu === 2
+                    ? <TransferTable />
+                    : ""
+            }
+            {
+                popupMenu === 3
+                    ? <PlayerImage />
+                    : ""
+            }
+        </PopupContentContainer>
     );
 });
 

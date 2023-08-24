@@ -1,13 +1,13 @@
 import { memo } from 'react';
-import '../assets/css/reset.css'
 import PosList from './PosList';
 import Popup from './Popup/Popup';
 import { useSelector } from 'react-redux';
+import { MainWrap } from '../styled/MainStyle';
 const Main = memo(() => {
     const { position } = useSelector(state => state.playerR)
     const { selectedPlayer } = useSelector(state => state.popupR)
     return (
-        <div className="wrap">
+        <MainWrap>
             {
                 position ? (
                     position.map((_, idx) => (
@@ -20,7 +20,7 @@ const Main = memo(() => {
             {
                 selectedPlayer && <Popup />
             }
-        </div>
+        </MainWrap>
 
     );
 });

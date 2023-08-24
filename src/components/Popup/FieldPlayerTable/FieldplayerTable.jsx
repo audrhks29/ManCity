@@ -1,10 +1,11 @@
+import { PlayerTable } from "../../../styled/TableStyle";
 import FieldplayerTableTbody from "./FieldplayerTableTbody";
 import FieldplayerTableThead from "./FieldplayerTableThead";
 
 const FieldplayerTable = () => {
 
     return (
-        <table className="playerStats fieldPlayer">
+        <PlayerTable>
             <colgroup>
                 <col width="250px" />
                 <col width="80px" />
@@ -14,7 +15,7 @@ const FieldplayerTable = () => {
             </colgroup>
             <FieldplayerTableThead />
             <FieldplayerTableTbody />
-        </table >
+        </PlayerTable >
     );
 };
 

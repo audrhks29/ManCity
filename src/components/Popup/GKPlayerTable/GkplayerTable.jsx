@@ -1,10 +1,11 @@
+import { PlayerTable } from "../../../styled/TableStyle";
 import GkplayerTableTbody from "./GkplayerTableTbody";
 import GkplayerTableThead from "./GkplayerTableThead";
 
 const GkplayerTable = () => {
 
     return (
-        <table className="playerStats fieldPlayer">
+        <PlayerTable>
             <colgroup>
                 <col width="250px" />
                 <col width="80px" />
@@ -14,7 +15,7 @@ const GkplayerTable = () => {
             </colgroup>
             <GkplayerTableThead />
             <GkplayerTableTbody />
-        </table >
+        </PlayerTable >
     );
 };
 

@@ -1,8 +1,9 @@
 import { memo } from "react";
-import PlayerStatsTransfer from "./../PlayerStatsTransfer";
-import PersonalDetail from './../PersonalDetail';
+import PlayerStatsTransfer from "./PlayerStatsTransfer";
+import PersonalDetail from './PersonalDetail';
 import { useDispatch, useSelector } from "react-redux";
 import { togglePopup, isSelectPlayer } from "../../store/module/PopupStatusSlice";
+import { PersonalNameContainer, PopupContainer, PopupInnerContainer, PopupLeftContainer, PopupRightContainer } from "../../styled/PopupStyle";
 
 const Popup = memo(() => {
     const { selectedPlayer } = useSelector(state => state.popupR)
@@ -14,24 +15,24 @@ const Popup = memo(() => {
     return (
         <>
             {
-                <div className={selectedPlayer ? 'popup on' : 'popup'}>
+                <PopupContainer>
                     <div className="inner">
-                        <div className="popupIn">
-                            <div className="popupLeft">
+                        <PopupInnerContainer>
+                            <PopupLeftContainer>
                                 <img src={`./images${selectedPlayer.playerInfo.img}`} alt="" />
                                 <PersonalDetail />
-                            </div>
-                            <div className="popupRight">
-                                <div className="personalNameNum">
+                            </PopupLeftContainer>
+                            <PopupRightContainer>
+                                <PersonalNameContainer>
                                     <strong>{selectedPlayer && selectedPlayer.name}</strong>
                                     <span>{selectedPlayer && selectedPlayer.no}</span>
                                     <div className="closePopup" onClick={() => onClickList(null)}><i className="xi-close"></i></div>
-                                </div>
+                                </PersonalNameContainer>
                                 <PlayerStatsTransfer />
-                            </div>
-                        </div>
+                            </PopupRightContainer>
+                        </PopupInnerContainer>
                     </div>
-                </div >
+                </PopupContainer >
             }
         </>
     );

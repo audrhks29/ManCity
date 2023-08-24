@@ -1,5 +1,6 @@
 import { memo } from "react";
 import { useSelector } from "react-redux";
+import { PersonalDetailContainer } from "../../styled/PopupStyle";
 
 const PersonalDetail = memo(() => {
     const { selectedPlayer } = useSelector(state => state.popupR)
@@ -17,7 +18,7 @@ const PersonalDetail = memo(() => {
     ];
 
     return (
-        <div className="personalDetailList">
+        <PersonalDetailContainer>
             <ul>
                 {
                     pd1Data.map(item => (
@@ -28,7 +29,7 @@ const PersonalDetail = memo(() => {
                     ))
                 }
             </ul>
-        </div >
+        </PersonalDetailContainer >
     );
 });
 

@@ -1,9 +1,10 @@
 import Main from './components/Main'
-import './assets/css/Style.scss'
+import GlobalStyles from './styled/GlobalStyles.js'
 
 const App = () => {
   return (
     <>
+      <GlobalStyles />
       <Main />
     </>
   );
