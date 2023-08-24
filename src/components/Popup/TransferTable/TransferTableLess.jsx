@@ -1,7 +1,9 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 
-const TransferTableLess = ({ selectedItem }) => {
-    let dataSlice1 = selectedItem.playerInfo.transferHistory.slice(0, 8)
+const TransferTableLess = () => {
+    const { selectedPlayer } = useSelector(state => state.popupR)
+    let dataSlice1 = selectedPlayer.playerInfo.transferHistory.slice(0, 8)
     return (
         <table>
             <colgroup>

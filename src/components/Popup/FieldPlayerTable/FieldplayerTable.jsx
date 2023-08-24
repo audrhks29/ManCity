@@ -1,7 +1,7 @@
 import FieldplayerTableTbody from "./FieldplayerTableTbody";
 import FieldplayerTableThead from "./FieldplayerTableThead";
 
-const FieldplayerTable = ({ selectedItem }) => {
+const FieldplayerTable = () => {
 
     return (
         <table className="playerStats fieldPlayer">
@@ -13,7 +13,7 @@ const FieldplayerTable = ({ selectedItem }) => {
                 <col width="80px" />
             </colgroup>
             <FieldplayerTableThead />
-            <FieldplayerTableTbody selectedItem={selectedItem} />
+            <FieldplayerTableTbody />
         </table >
     );
 };

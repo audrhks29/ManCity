@@ -1,5 +1,8 @@
+import { useSelector } from "react-redux";
+
 const FieldplayerTableTbody = ({ selectedItem }) => {
-    const { championsLeague, premierLeague, faCup, eflCup, communityShield } = selectedItem.playerInfo.stats
+    const { selectedPlayer } = useSelector(state => state.popupR)
+    const { championsLeague, premierLeague, faCup, eflCup, communityShield } = selectedPlayer.playerInfo.stats
     const FieldplayerTableTbodyData = [
         {
             label: "champions League", img: "./images/cl.png",

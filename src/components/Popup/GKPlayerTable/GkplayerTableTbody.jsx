@@ -1,5 +1,8 @@
-const GkplayerTableTbody = ({ selectedItem }) => {
-    const { championsLeague, premierLeague, faCup, eflCup, communityShield } = selectedItem.playerInfo.stats
+import { useSelector } from "react-redux";
+
+const GkplayerTableTbody = () => {
+    const { selectedPlayer } = useSelector(state => state.popupR)
+    const { championsLeague, premierLeague, faCup, eflCup, communityShield } = selectedPlayer.playerInfo.stats
     const gkplayerTableTbodyData = [
         {
             label: "champions League", img: "./images/cl.png",
@@ -50,7 +53,7 @@ const GkplayerTableTbody = ({ selectedItem }) => {
     return (
         <tbody>
             {
-                gkplayerTableTbodyData.map((item, idx) =>
+                gkplayerTableTbodyData.map((item) =>
                     <tr key={item.label}>
                         <td><img src={item.img} alt="" />{item.label}</td>
                         <td>{item.league.appearances}</td>

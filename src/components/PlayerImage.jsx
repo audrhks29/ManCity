@@ -1,27 +1,21 @@
-import React from 'react';
+import React, { memo } from 'react';
+import { useSelector } from 'react-redux';
 
-const PlayerImage = ({ selectedItem, changeImg, playerFace }) => {
-    console.log(selectedItem.playerInfo.moreimg1);
+const PlayerImage = memo(() => {
+    const { selectedPlayer } = useSelector(state => state.popupR)
     return (
         <ul className='playerImage'>
-            <li onClick={() => changeImg(selectedItem.playerInfo.img)}><img src={`./images${selectedItem.playerInfo.img}`} /></li>
+            <li><img src={`./images${selectedPlayer.playerInfo.img}`} /></li>
             {
-                selectedItem.playerInfo.moreimg1 &&
-                <li onClick={() =>
-                    changeImg(selectedItem.playerInfo.moreimg1)
-                }>
-                    <img src={selectedItem.playerInfo.moreimg1} />
-                </li>
+                selectedPlayer.playerInfo.moreimg1 &&
+                <li><img src={selectedPlayer.playerInfo.moreimg1} /></li>
             }
             {
-                selectedItem.playerInfo.moreimg2 &&
-                <li onClick={() =>
-                    changeImg(selectedItem.playerInfo.moreimg2)}>
-                    <img src={selectedItem.playerInfo.moreimg2} />
-                </li>
+                selectedPlayer.playerInfo.moreimg2 &&
+                <li><img src={selectedPlayer.playerInfo.moreimg2} /></li>
             }
         </ul>
     );
-};
+});
 
 export default PlayerImage;

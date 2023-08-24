@@ -1,13 +1,16 @@
-
+import { memo } from "react";
 import PlayerStatsTransfer from "./../PlayerStatsTransfer";
 import PersonalDetail from './../PersonalDetail';
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { togglePopup, isSelectPlayer } from "../../store/module/PopupStatusSlice";
 
-
-const Popup = ({ changeImg, playerFace }) => {
-    const { playerData } = useSelector(state => state.playerR)
+const Popup = memo(() => {
     const { selectedPlayer } = useSelector(state => state.popupR)
-    console.log(selectedPlayer);
+    const dispatch = useDispatch()
+    const onClickList = (item) => {
+        dispatch(isSelectPlayer(item))
+        dispatch(togglePopup())
+    }
     return (
         <>
             {
@@ -22,9 +25,9 @@ const Popup = ({ changeImg, playerFace }) => {
                                 <div className="personalNameNum">
                                     <strong>{selectedPlayer && selectedPlayer.name}</strong>
                                     <span>{selectedPlayer && selectedPlayer.no}</span>
-                                    <div className="closePopup"><i className="xi-close"></i></div>
+                                    <div className="closePopup" onClick={() => onClickList(null)}><i className="xi-close"></i></div>
                                 </div>
-                                <PlayerStatsTransfer changeImg={changeImg} playerFace={playerFace} />
+                                <PlayerStatsTransfer />
                             </div>
                         </div>
                     </div>
@@ -32,6 +35,6 @@ const Popup = ({ changeImg, playerFace }) => {
             }
         </>
     );
-};
+});
 
 export default Popup;

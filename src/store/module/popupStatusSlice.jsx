@@ -1,7 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit';
 const initialState = {
     selectedPlayer: null,
-    popupOpen: false
+    popupOpen: false,
+    popupMenu: 1
 }
 export const popupStatusSlice = createSlice({
     name: 'popup',
@@ -9,11 +10,12 @@ export const popupStatusSlice = createSlice({
     reducers: {
         isSelectPlayer(state, action) {
             state.selectedPlayer = action.payload
-            console.log(action.payload);
         },
-        isPopupOpen(state, action) {
+        togglePopup(state, action) {
             state.popupOpen = !state.popupOpen
-            console.log(state.popupOpen);
+        },
+        onChangePopupMenu(state, action) {
+            state.popupMenu = action.payload
         }
     },
     extraReducers: (builder) => {
@@ -21,5 +23,5 @@ export const popupStatusSlice = createSlice({
     }
 })
 
-export const { isSelectPlayer, isPopupOpen } = popupStatusSlice.actions
+export const { isSelectPlayer, togglePopup, onChangePopupMenu } = popupStatusSlice.actions
 export default popupStatusSlice.reducer

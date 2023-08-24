@@ -1,8 +1,8 @@
-import { useEffect } from 'react';
+import { memo, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getPlayerData } from '../store/module/playerSlice';
-import { isPopupOpen, isSelectPlayer } from '../store/module/PopupStatusSlice';
-const Inner = ({ idx }) => {
+import { togglePopup, isSelectPlayer } from '../store/module/PopupStatusSlice';
+const Inner = memo(({ idx }) => {
     const { playerData, position } = useSelector(state => state.playerR)
     const dispatch = useDispatch()
     useEffect(() => {
@@ -10,7 +10,7 @@ const Inner = ({ idx }) => {
     }, [])
     const onClickList = (item) => {
         dispatch(isSelectPlayer(item))
-        dispatch(isPopupOpen())
+        dispatch(togglePopup())
     }
     return (
         <div className='inner'>
@@ -26,6 +26,6 @@ const Inner = ({ idx }) => {
             </ul>
         </div >
     );
-};
+});
 
 export default Inner;

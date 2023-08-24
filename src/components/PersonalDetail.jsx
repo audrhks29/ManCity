@@ -1,9 +1,7 @@
-// import PersonalDetailPd1 from "./PersonalDetailPd1";
-// import PersonalDetailPd2 from "./PersonalDetailPd2";
-
+import { memo } from "react";
 import { useSelector } from "react-redux";
 
-const PersonalDetail = ({ }) => {
+const PersonalDetail = memo(() => {
     const { selectedPlayer } = useSelector(state => state.popupR)
     const { height, weight, foot } = selectedPlayer.playerInfo.body
     const { position } = selectedPlayer.playerInfo
@@ -32,6 +30,6 @@ const PersonalDetail = ({ }) => {
             </ul>
         </div >
     );
-};
+});
 
 export default PersonalDetail;

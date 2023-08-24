@@ -1,14 +1,16 @@
 import React from 'react';
 import TransferTableMore from './TransferTableMore';
 import TransferTableLess from './TransferTableLess';
+import { useSelector } from 'react-redux';
 
-const TransferTable = ({ selectedItem }) => {
+const TransferTable = () => {
+    const { selectedPlayer } = useSelector(state => state.popupR)
     return (
         <>
             {
-                selectedItem.playerInfo.transferHistory.length > 8 ?
-                    <TransferTableMore selectedItem={selectedItem} />
-                    : <TransferTableLess selectedItem={selectedItem} />
+                selectedPlayer.playerInfo.transferHistory.length > 8 ?
+                    <TransferTableMore />
+                    : <TransferTableLess />
             }
         </>
     );

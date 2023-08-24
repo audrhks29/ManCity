@@ -1,7 +1,7 @@
 import GkplayerTableTbody from "./GkplayerTableTbody";
 import GkplayerTableThead from "./GkplayerTableThead";
 
-const gkplayerTable = ({ selectedItem }) => {
+const GkplayerTable = () => {
 
     return (
         <table className="playerStats fieldPlayer">
@@ -13,9 +13,9 @@ const gkplayerTable = ({ selectedItem }) => {
                 <col width="80px" />
             </colgroup>
             <GkplayerTableThead />
-            <GkplayerTableTbody selectedItem={selectedItem} />
+            <GkplayerTableTbody />
         </table >
     );
 };
 
-export default gkplayerTable;
+export default GkplayerTable;
